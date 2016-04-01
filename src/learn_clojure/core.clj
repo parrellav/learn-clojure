@@ -114,3 +114,14 @@
     (* n (power n (dec k)))
     ))
 
+(defn fib [n]
+  (if (< n 2)
+    n
+    (+ (fib (- n 1))
+       (fib (- n 2)))))
+
+(defn my-repeat [n val]
+  (if (pos? n)
+    (cons val (my-repeat (- n 1) val))
+    (list)
+    ))
